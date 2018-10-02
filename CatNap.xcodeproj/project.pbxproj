@@ -21,6 +21,8 @@
 		BA88CDB92164062800200191 /* lose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA88CDB42164062800200191 /* lose.mp3 */; };
 		BA88CDBA2164062800200191 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA88CDB52164062800200191 /* backgroundMusic.mp3 */; };
 		BA88CDBD2164137A00200191 /* Cat.sks in Resources */ = {isa = PBXBuildFile; fileRef = BA88CDBC2164137A00200191 /* Cat.sks */; };
+		BA88CDBF21642A4900200191 /* CatCurl.sks in Resources */ = {isa = PBXBuildFile; fileRef = BA88CDBE21642A4900200191 /* CatCurl.sks */; };
+		BA88CDC121642B7A00200191 /* CatWakeUp.sks in Resources */ = {isa = PBXBuildFile; fileRef = BA88CDC021642B7A00200191 /* CatWakeUp.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		BA88CDB42164062800200191 /* lose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lose.mp3; sourceTree = "<group>"; };
 		BA88CDB52164062800200191 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
 		BA88CDBC2164137A00200191 /* Cat.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Cat.sks; sourceTree = "<group>"; };
+		BA88CDBE21642A4900200191 /* CatCurl.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CatCurl.sks; sourceTree = "<group>"; };
+		BA88CDC021642B7A00200191 /* CatWakeUp.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CatWakeUp.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 			children = (
 				BA88CD902163FECE00200191 /* GameScene.sks */,
 				BA88CDBC2164137A00200191 /* Cat.sks */,
+				BA88CDBE21642A4900200191 /* CatCurl.sks */,
+				BA88CDC021642B7A00200191 /* CatWakeUp.sks */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -169,6 +175,8 @@
 				BA88CD912163FECE00200191 /* GameScene.sks in Resources */,
 				BA88CDB92164062800200191 /* lose.mp3 in Resources */,
 				BA88CD9C2163FECF00200191 /* Assets.xcassets in Resources */,
+				BA88CDC121642B7A00200191 /* CatWakeUp.sks in Resources */,
+				BA88CDBF21642A4900200191 /* CatCurl.sks in Resources */,
 				BA88CDB82164062800200191 /* win.mp3 in Resources */,
 				BA88CD9F2163FECF00200191 /* LaunchScreen.storyboard in Resources */,
 				BA88CDB62164062800200191 /* mrreow.mp3 in Resources */,
