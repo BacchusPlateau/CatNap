@@ -15,6 +15,12 @@
 		BA88CD9A2163FECE00200191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA88CD982163FECE00200191 /* Main.storyboard */; };
 		BA88CD9C2163FECF00200191 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA88CD9B2163FECF00200191 /* Assets.xcassets */; };
 		BA88CD9F2163FECF00200191 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA88CD9D2163FECF00200191 /* LaunchScreen.storyboard */; };
+		BA88CDB62164062800200191 /* mrreow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA88CDB12164062800200191 /* mrreow.mp3 */; };
+		BA88CDB72164062800200191 /* pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA88CDB22164062800200191 /* pop.mp3 */; };
+		BA88CDB82164062800200191 /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA88CDB32164062800200191 /* win.mp3 */; };
+		BA88CDB92164062800200191 /* lose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA88CDB42164062800200191 /* lose.mp3 */; };
+		BA88CDBA2164062800200191 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA88CDB52164062800200191 /* backgroundMusic.mp3 */; };
+		BA88CDBD2164137A00200191 /* Cat.sks in Resources */ = {isa = PBXBuildFile; fileRef = BA88CDBC2164137A00200191 /* Cat.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		BA88CD9B2163FECF00200191 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA88CD9E2163FECF00200191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA88CDA02163FECF00200191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA88CDB12164062800200191 /* mrreow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mrreow.mp3; sourceTree = "<group>"; };
+		BA88CDB22164062800200191 /* pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pop.mp3; sourceTree = "<group>"; };
+		BA88CDB32164062800200191 /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
+		BA88CDB42164062800200191 /* lose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lose.mp3; sourceTree = "<group>"; };
+		BA88CDB52164062800200191 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
+		BA88CDBC2164137A00200191 /* Cat.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Cat.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +72,9 @@
 		BA88CD8D2163FECE00200191 /* CatNap */ = {
 			isa = PBXGroup;
 			children = (
+				BA88CDBB2164132000200191 /* Scenes */,
+				BA88CDB02164062800200191 /* Sounds */,
 				BA88CD8E2163FECE00200191 /* AppDelegate.swift */,
-				BA88CD902163FECE00200191 /* GameScene.sks */,
 				BA88CD922163FECE00200191 /* Actions.sks */,
 				BA88CD942163FECE00200191 /* GameScene.swift */,
 				BA88CD962163FECE00200191 /* GameViewController.swift */,
@@ -71,6 +84,27 @@
 				BA88CDA02163FECF00200191 /* Info.plist */,
 			);
 			path = CatNap;
+			sourceTree = "<group>";
+		};
+		BA88CDB02164062800200191 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				BA88CDB12164062800200191 /* mrreow.mp3 */,
+				BA88CDB22164062800200191 /* pop.mp3 */,
+				BA88CDB32164062800200191 /* win.mp3 */,
+				BA88CDB42164062800200191 /* lose.mp3 */,
+				BA88CDB52164062800200191 /* backgroundMusic.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		BA88CDBB2164132000200191 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BA88CD902163FECE00200191 /* GameScene.sks */,
+				BA88CDBC2164137A00200191 /* Cat.sks */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,9 +167,15 @@
 			files = (
 				BA88CD9A2163FECE00200191 /* Main.storyboard in Resources */,
 				BA88CD912163FECE00200191 /* GameScene.sks in Resources */,
+				BA88CDB92164062800200191 /* lose.mp3 in Resources */,
 				BA88CD9C2163FECF00200191 /* Assets.xcassets in Resources */,
+				BA88CDB82164062800200191 /* win.mp3 in Resources */,
 				BA88CD9F2163FECF00200191 /* LaunchScreen.storyboard in Resources */,
+				BA88CDB62164062800200191 /* mrreow.mp3 in Resources */,
+				BA88CDB72164062800200191 /* pop.mp3 in Resources */,
+				BA88CDBA2164062800200191 /* backgroundMusic.mp3 in Resources */,
 				BA88CD932163FECE00200191 /* Actions.sks in Resources */,
+				BA88CDBD2164137A00200191 /* Cat.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
