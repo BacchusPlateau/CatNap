@@ -14,6 +14,8 @@ protocol EventListenerNode {
 
 class GameScene: SKScene {
     
+    var bedNode: BedNode!
+    var catNode: CatNode!
     
     override func didMove(to view: SKView) {
         
@@ -30,6 +32,17 @@ class GameScene: SKScene {
                                   height: size.height - playableMargin * 2)
         
         physicsBody = SKPhysicsBody(edgeLoopFrom: playableRect)
+        
+        enumerateChildNodes(withName: "//*", using: { node, _ in
+            if let eventListenerNode = node as? EventListenerNode {
+                eventListenerNode.didMoveToScene()
+            }
+        })
+        
+        bedNode = (childNode(withName: "bed") as! BedNode)
+        catNode = (childNode(withName: "//cat_body") as! CatNode)  //catNode is not a direct child of the scene
+        
+        SKTAudio.sharedInstance().playBackgroundMusic("backgroundMusic.mp3")
         
     }
     
