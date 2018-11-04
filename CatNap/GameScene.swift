@@ -30,14 +30,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var bedNode: BedNode!
     var catNode: CatNode!
     var playable = true
+    var bounces = 0
     
     func didBegin(_ contact: SKPhysicsContact) {
+        
+        let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
+        
+        if (collision == PhysicsCategory.Label | PhysicsCategory.Edge) {
+            print("Bounce!")
+            bounces += 1
+            if(bounces == 4) {
+                let labelNode = (childNode(withName: "EndGameLabel") as! MessageNode) as SKLabelNode
+                labelNode.removeFromParent()
+            }
+        }
         
         if (!playable) {
             return
         }
-        
-        let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
         
         if (collision == PhysicsCategory.Cat | PhysicsCategory.Bed) {
             win()

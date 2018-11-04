@@ -17,6 +17,7 @@ class MessageNode: SKLabelNode {
         fontSize = 256.0
         fontColor = SKColor.gray
         zPosition = 100
+        name = "EndGameLabel"
         
         let front = SKLabelNode(fontNamed: "AvenirNext-Regular")
         front.text = message
@@ -28,6 +29,7 @@ class MessageNode: SKLabelNode {
         physicsBody = SKPhysicsBody(circleOfRadius: 10)
         physicsBody!.collisionBitMask = PhysicsCategory.Edge
         physicsBody!.categoryBitMask = PhysicsCategory.Label
+        physicsBody!.contactTestBitMask = PhysicsCategory.Edge
         physicsBody!.restitution = 0.7
         
     }
