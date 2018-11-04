@@ -12,10 +12,42 @@ protocol EventListenerNode {
     func didMoveToScene()
 }
 
-class GameScene: SKScene {
+protocol InteractiveNode {
+    func interact()
+}
+
+struct PhysicsCategory {
+    static let None:    UInt32 = 0
+    static let Cat:     UInt32 = 0b1 //1
+    static let Block:   UInt32 = 0b10 //2
+    static let Bed:     UInt32 = 0b100 //4
+    static let Edge:    UInt32 = 0b1000 //8
+    static let Label:   UInt32 = 0b10000 //16
+}
+
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var bedNode: BedNode!
     var catNode: CatNode!
+    var playable = true
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        
+        if (!playable) {
+            return
+        }
+        
+        let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
+        
+        if (collision == PhysicsCategory.Cat | PhysicsCategory.Bed) {
+            win()
+            print("Success")
+        } else if (collision == PhysicsCategory.Cat | PhysicsCategory.Edge) {
+            lose()
+            print("Fail")
+        }
+        
+    }
     
     override func didMove(to view: SKView) {
         
@@ -32,6 +64,8 @@ class GameScene: SKScene {
                                   height: size.height - playableMargin * 2)
         
         physicsBody = SKPhysicsBody(edgeLoopFrom: playableRect)
+        physicsWorld.contactDelegate = self
+        physicsBody!.categoryBitMask = PhysicsCategory.Edge
         
         enumerateChildNodes(withName: "//*", using: { node, _ in
             if let eventListenerNode = node as? EventListenerNode {
@@ -46,6 +80,48 @@ class GameScene: SKScene {
         
     }
     
+    func inGameMessage(text: String) {
+        
+        let message = MessageNode(message: text)
+        message.position = CGPoint(x: frame.midX, y: frame.midY)
+        addChild(message)
+        
+    }
     
+    func lose() {
+        
+        playable = false
+        
+        SKTAudio.sharedInstance().pauseBackgroundMusic()
+        SKTAudio.sharedInstance().playSoundEffect("lose.mp3")
+        
+        inGameMessage(text: "Try again...")
+        catNode.wakeUp()
+        
+        run(SKAction.afterDelay(5, runBlock: newGame))
+        
+    }
+    
+    func newGame() {
+        
+        let scene = GameScene(fileNamed: "GameScene")
+        scene!.scaleMode = scaleMode
+        view!.presentScene(scene)
+        
+    }
+    
+    func win() {
+        
+        playable = false
+        
+        SKTAudio.sharedInstance().pauseBackgroundMusic()
+        SKTAudio.sharedInstance().playSoundEffect("win.mp3")
+        
+        catNode.curlAt(scenePoint: bedNode.position)
+        
+        inGameMessage(text: "Nice job!")
+        run(SKAction.afterDelay(5, runBlock: newGame))
+        
+    }
   
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA245D81218E574D0050DE7E /* BlockNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA245D80218E574D0050DE7E /* BlockNode.swift */; };
+		BA245D83218E68290050DE7E /* MessageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA245D82218E68290050DE7E /* MessageNode.swift */; };
 		BA69CF63218634E5002DECA1 /* BedNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69CF62218634E5002DECA1 /* BedNode.swift */; };
 		BA69CF6521863AD7002DECA1 /* CatNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69CF6421863AD7002DECA1 /* CatNode.swift */; };
 		BA69CF7321864E26002DECA1 /* SKColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69CF6721864E26002DECA1 /* SKColor+Extensions.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA245D80218E574D0050DE7E /* BlockNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockNode.swift; sourceTree = "<group>"; };
+		BA245D82218E68290050DE7E /* MessageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageNode.swift; sourceTree = "<group>"; };
 		BA69CF62218634E5002DECA1 /* BedNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedNode.swift; sourceTree = "<group>"; };
 		BA69CF6421863AD7002DECA1 /* CatNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatNode.swift; sourceTree = "<group>"; };
 		BA69CF6721864E26002DECA1 /* SKColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKColor+Extensions.swift"; sourceTree = "<group>"; };
@@ -129,7 +133,9 @@
 				BA88CD8E2163FECE00200191 /* AppDelegate.swift */,
 				BA88CD922163FECE00200191 /* Actions.sks */,
 				BA88CD942163FECE00200191 /* GameScene.swift */,
+				BA245D82218E68290050DE7E /* MessageNode.swift */,
 				BA69CF6421863AD7002DECA1 /* CatNode.swift */,
+				BA245D80218E574D0050DE7E /* BlockNode.swift */,
 				BA69CF62218634E5002DECA1 /* BedNode.swift */,
 				BA88CD962163FECE00200191 /* GameViewController.swift */,
 				BA88CD982163FECE00200191 /* Main.storyboard */,
@@ -245,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA88CD952163FECE00200191 /* GameScene.swift in Sources */,
+				BA245D83218E68290050DE7E /* MessageNode.swift in Sources */,
 				BA69CF7721864E26002DECA1 /* SKAction+Extensions.swift in Sources */,
 				BA69CF7621864E26002DECA1 /* SKTTimingFunctions.swift in Sources */,
 				BA69CF7421864E26002DECA1 /* CGVector+Extensions.swift in Sources */,
@@ -253,6 +260,7 @@
 				BA69CF7C21864E26002DECA1 /* SKTAudio.swift in Sources */,
 				BA69CF7921864E26002DECA1 /* SKNode+Extensions.swift in Sources */,
 				BA69CF7B21864E26002DECA1 /* SKTEffects.swift in Sources */,
+				BA245D81218E574D0050DE7E /* BlockNode.swift in Sources */,
 				BA69CF7321864E26002DECA1 /* SKColor+Extensions.swift in Sources */,
 				BA69CF6521863AD7002DECA1 /* CatNode.swift in Sources */,
 				BA69CF63218634E5002DECA1 /* BedNode.swift in Sources */,
