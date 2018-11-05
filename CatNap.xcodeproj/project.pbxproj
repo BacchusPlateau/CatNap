@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BA245D81218E574D0050DE7E /* BlockNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA245D80218E574D0050DE7E /* BlockNode.swift */; };
 		BA245D83218E68290050DE7E /* MessageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA245D82218E68290050DE7E /* MessageNode.swift */; };
+		BA245D87218FC6910050DE7E /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = BA245D86218FC6910050DE7E /* Level2.sks */; };
+		BA245D89218FCB540050DE7E /* SpringNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA245D88218FCB540050DE7E /* SpringNode.swift */; };
 		BA69CF63218634E5002DECA1 /* BedNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69CF62218634E5002DECA1 /* BedNode.swift */; };
 		BA69CF6521863AD7002DECA1 /* CatNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69CF6421863AD7002DECA1 /* CatNode.swift */; };
 		BA69CF7321864E26002DECA1 /* SKColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69CF6721864E26002DECA1 /* SKColor+Extensions.swift */; };
@@ -24,7 +26,7 @@
 		BA69CF7D21864E26002DECA1 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69CF7121864E26002DECA1 /* Vector3.swift */; };
 		BA69CF7E21864E26002DECA1 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69CF7221864E26002DECA1 /* CGFloat+Extensions.swift */; };
 		BA88CD8F2163FECE00200191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA88CD8E2163FECE00200191 /* AppDelegate.swift */; };
-		BA88CD912163FECE00200191 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BA88CD902163FECE00200191 /* GameScene.sks */; };
+		BA88CD912163FECE00200191 /* Level1.sks in Resources */ = {isa = PBXBuildFile; fileRef = BA88CD902163FECE00200191 /* Level1.sks */; };
 		BA88CD932163FECE00200191 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = BA88CD922163FECE00200191 /* Actions.sks */; };
 		BA88CD952163FECE00200191 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA88CD942163FECE00200191 /* GameScene.swift */; };
 		BA88CD972163FECE00200191 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA88CD962163FECE00200191 /* GameViewController.swift */; };
@@ -44,6 +46,8 @@
 /* Begin PBXFileReference section */
 		BA245D80218E574D0050DE7E /* BlockNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockNode.swift; sourceTree = "<group>"; };
 		BA245D82218E68290050DE7E /* MessageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageNode.swift; sourceTree = "<group>"; };
+		BA245D86218FC6910050DE7E /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
+		BA245D88218FCB540050DE7E /* SpringNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringNode.swift; sourceTree = "<group>"; };
 		BA69CF62218634E5002DECA1 /* BedNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedNode.swift; sourceTree = "<group>"; };
 		BA69CF6421863AD7002DECA1 /* CatNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatNode.swift; sourceTree = "<group>"; };
 		BA69CF6721864E26002DECA1 /* SKColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKColor+Extensions.swift"; sourceTree = "<group>"; };
@@ -60,7 +64,7 @@
 		BA69CF7221864E26002DECA1 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		BA88CD8B2163FECE00200191 /* CatNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA88CD8E2163FECE00200191 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BA88CD902163FECE00200191 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		BA88CD902163FECE00200191 /* Level1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level1.sks; sourceTree = "<group>"; };
 		BA88CD922163FECE00200191 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		BA88CD942163FECE00200191 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		BA88CD962163FECE00200191 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 				BA88CD8E2163FECE00200191 /* AppDelegate.swift */,
 				BA88CD922163FECE00200191 /* Actions.sks */,
 				BA88CD942163FECE00200191 /* GameScene.swift */,
+				BA245D88218FCB540050DE7E /* SpringNode.swift */,
 				BA245D82218E68290050DE7E /* MessageNode.swift */,
 				BA69CF6421863AD7002DECA1 /* CatNode.swift */,
 				BA245D80218E574D0050DE7E /* BlockNode.swift */,
@@ -161,10 +166,11 @@
 		BA88CDBB2164132000200191 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				BA88CD902163FECE00200191 /* GameScene.sks */,
+				BA88CD902163FECE00200191 /* Level1.sks */,
 				BA88CDBC2164137A00200191 /* Cat.sks */,
 				BA88CDBE21642A4900200191 /* CatCurl.sks */,
 				BA88CDC021642B7A00200191 /* CatWakeUp.sks */,
+				BA245D86218FC6910050DE7E /* Level2.sks */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -228,10 +234,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA88CD9A2163FECE00200191 /* Main.storyboard in Resources */,
-				BA88CD912163FECE00200191 /* GameScene.sks in Resources */,
+				BA88CD912163FECE00200191 /* Level1.sks in Resources */,
 				BA88CDB92164062800200191 /* lose.mp3 in Resources */,
 				BA88CD9C2163FECF00200191 /* Assets.xcassets in Resources */,
 				BA88CDC121642B7A00200191 /* CatWakeUp.sks in Resources */,
+				BA245D87218FC6910050DE7E /* Level2.sks in Resources */,
 				BA88CDBF21642A4900200191 /* CatCurl.sks in Resources */,
 				BA88CDB82164062800200191 /* win.mp3 in Resources */,
 				BA88CD9F2163FECF00200191 /* LaunchScreen.storyboard in Resources */,
@@ -266,6 +273,7 @@
 				BA69CF63218634E5002DECA1 /* BedNode.swift in Sources */,
 				BA69CF7521864E26002DECA1 /* Int+Extensions.swift in Sources */,
 				BA88CD972163FECE00200191 /* GameViewController.swift in Sources */,
+				BA245D89218FCB540050DE7E /* SpringNode.swift in Sources */,
 				BA69CF7E21864E26002DECA1 /* CGFloat+Extensions.swift in Sources */,
 				BA69CF7D21864E26002DECA1 /* Vector3.swift in Sources */,
 				BA88CD8F2163FECE00200191 /* AppDelegate.swift in Sources */,

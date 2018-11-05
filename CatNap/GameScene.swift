@@ -23,6 +23,7 @@ struct PhysicsCategory {
     static let Bed:     UInt32 = 0b100 //4
     static let Edge:    UInt32 = 0b1000 //8
     static let Label:   UInt32 = 0b10000 //16
+    static let Spring:  UInt32 = 0b100000 //32
 }
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
@@ -31,6 +32,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var catNode: CatNode!
     var playable = true
     var bounces = 0
+    var currentLevel: Int = 0
     
     func didBegin(_ contact: SKPhysicsContact) {
         
@@ -90,11 +92,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
+    override func didSimulatePhysics() {
+        
+        if (playable) {
+            if (abs(catNode.parent!.zRotation) > CGFloat(25).degreesToRadians()) {
+                lose()
+            }
+        }
+        
+    }
+    
     func inGameMessage(text: String) {
         
         let message = MessageNode(message: text)
         message.position = CGPoint(x: frame.midX, y: frame.midY)
         addChild(message)
+        
+    }
+    
+    class func level(levelNum: Int) -> GameScene? {
+        
+        let scene = GameScene(fileNamed: "Level\(levelNum)")!
+        scene.currentLevel = levelNum
+        scene.scaleMode = .aspectFill
+        
+        return scene
         
     }
     
@@ -114,9 +136,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func newGame() {
         
-        let scene = GameScene(fileNamed: "GameScene")
-        scene!.scaleMode = scaleMode
-        view!.presentScene(scene)
+        view!.presentScene(GameScene.level(levelNum: currentLevel))
         
     }
     
