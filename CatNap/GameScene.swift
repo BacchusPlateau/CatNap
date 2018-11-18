@@ -24,6 +24,7 @@ struct PhysicsCategory {
     static let Edge:    UInt32 = 0b1000 //8
     static let Label:   UInt32 = 0b10000 //16
     static let Spring:  UInt32 = 0b100000 //32
+    static let Hook:    UInt32 = 0b1000000 //64
 }
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
@@ -33,13 +34,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var playable = true
     var bounces = 0
     var currentLevel: Int = 0
+    var hookBaseNode: HookBaseNode?
     
     func didBegin(_ contact: SKPhysicsContact) {
         
         let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
         
         if (collision == PhysicsCategory.Label | PhysicsCategory.Edge) {
-            print("Bounce!")
+            
             bounces += 1
             if(bounces == 4) {
                 let labelNode = (childNode(withName: "EndGameLabel") as! MessageNode) as SKLabelNode
@@ -57,6 +59,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else if (collision == PhysicsCategory.Cat | PhysicsCategory.Edge) {
             lose()
             print("Fail")
+        }
+        
+        if collision == PhysicsCategory.Cat | PhysicsCategory.Hook && hookBaseNode?.isHooked == false {
+            hookBaseNode!.hookCat(catPhysicsBody: catNode.parent!.physicsBody!)
         }
         
     }
@@ -90,11 +96,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         SKTAudio.sharedInstance().playBackgroundMusic("backgroundMusic.mp3")
         
+        //let rotationsConstraint = SKConstraint.zRotation(SKRange(lowerLimit: -π/4, upperLimit: π/4))
+        //catNode.parent!.constraints = [rotationsConstraint]
+        
+        hookBaseNode = childNode(withName: "hookBase") as? HookBaseNode
+        
     }
     
     override func didSimulatePhysics() {
         
-        if (playable) {
+        if (playable && hookBaseNode?.isHooked != true) {
             if (abs(catNode.parent!.zRotation) > CGFloat(25).degreesToRadians()) {
                 lose()
             }
@@ -124,6 +135,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         playable = false
         
+        if currentLevel > 1 {
+            currentLevel -= 1
+        }
+        
         SKTAudio.sharedInstance().pauseBackgroundMusic()
         SKTAudio.sharedInstance().playSoundEffect("lose.mp3")
         
@@ -144,13 +159,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         playable = false
         
+        if currentLevel < 3 {
+            currentLevel += 1
+        }
+        
         SKTAudio.sharedInstance().pauseBackgroundMusic()
         SKTAudio.sharedInstance().playSoundEffect("win.mp3")
         
-        catNode.curlAt(scenePoint: bedNode.position)
-        
         inGameMessage(text: "Nice job!")
         run(SKAction.afterDelay(5, runBlock: newGame))
+        
+        catNode.curlAt(scenePoint: bedNode.position)
         
     }
   
