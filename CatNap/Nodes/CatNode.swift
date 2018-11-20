@@ -38,6 +38,45 @@ class CatNode: SKSpriteNode, EventListenerNode, InteractiveNode {
         
     }
     
+    func curlAt2(scenePoint: CGPoint) {
+        
+        parent!.physicsBody = nil
+        
+        for child in children {
+            print("remove")
+            child.removeFromParent()
+        }
+        
+        zPosition = -2
+        texture = nil
+        color = SKColor.clear
+        
+//        let catCurl = SKSpriteNode(fileNamed: "CatCurl")!.childNode(withName: "cat_curl")!
+        
+//        catCurl.move(toParent: self)
+ //       catCurl.
+        
+        var localPoint = parent!.convert(scenePoint, from: scene!)
+        localPoint.y += frame.size.height / 3
+    
+        position = CGPoint(x: -30, y: 100)
+        let tex1 = SKTexture(imageNamed: "cat_curlup1")
+        let Tsize = CGSize(width: 380, height: 440)
+        size = Tsize
+        let tex2 = SKTexture(imageNamed: "cat_curlup2")
+        let tex3 = SKTexture(imageNamed: "cat_curlup3")
+        
+        let animate = SKAction.animate(with: [tex1, tex2, tex3], timePerFrame: 0.33)
+     //   run(animate)
+        print("animate")
+        run(SKAction.group([
+            SKAction.move(to: localPoint, duration: 0.66),
+            SKAction.rotate(toAngle: -parent!.zRotation, duration: 0.5),
+            animate
+            ]))
+        
+    }
+    
     func didMoveToScene() {
 
         let catBodyTexture = SKTexture(imageNamed: "cat_body_outline")

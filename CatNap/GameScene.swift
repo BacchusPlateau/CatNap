@@ -167,9 +167,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         SKTAudio.sharedInstance().playSoundEffect("win.mp3")
         
         inGameMessage(text: "Nice job!")
+        catNode.curlAt(scenePoint: bedNode.position)
+        
         run(SKAction.afterDelay(5, runBlock: newGame))
         
-        catNode.curlAt(scenePoint: bedNode.position)
         
     }
   
