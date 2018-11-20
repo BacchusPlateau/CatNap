@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		BA0A043321A4958800416B1F /* Level4.sks in Resources */ = {isa = PBXBuildFile; fileRef = BA0A043221A4958800416B1F /* Level4.sks */; };
+		BA0A043721A4B09D00416B1F /* discolights-loop.mov in Resources */ = {isa = PBXBuildFile; fileRef = BA0A043521A4B09D00416B1F /* discolights-loop.mov */; };
+		BA0A043821A4B09D00416B1F /* disco-sound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BA0A043621A4B09D00416B1F /* disco-sound.m4a */; };
+		BA0A043B21A4B0C600416B1F /* Level5.sks in Resources */ = {isa = PBXBuildFile; fileRef = BA0A043921A4B0C600416B1F /* Level5.sks */; };
+		BA0A043C21A4B0C600416B1F /* Level6.sks in Resources */ = {isa = PBXBuildFile; fileRef = BA0A043A21A4B0C600416B1F /* Level6.sks */; };
+		BA0A043E21A4B32600416B1F /* PictureNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A043D21A4B32600416B1F /* PictureNode.swift */; };
+		BA0A044021A4BCC600416B1F /* DiscoBallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A043F21A4BCC600416B1F /* DiscoBallNode.swift */; };
+		BA0A044221A4C07C00416B1F /* HintNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A044121A4C07C00416B1F /* HintNode.swift */; };
 		BA245D81218E574D0050DE7E /* BlockNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA245D80218E574D0050DE7E /* BlockNode.swift */; };
 		BA245D83218E68290050DE7E /* MessageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA245D82218E68290050DE7E /* MessageNode.swift */; };
 		BA245D87218FC6910050DE7E /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = BA245D86218FC6910050DE7E /* Level2.sks */; };
@@ -49,6 +56,13 @@
 
 /* Begin PBXFileReference section */
 		BA0A043221A4958800416B1F /* Level4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level4.sks; sourceTree = "<group>"; };
+		BA0A043521A4B09D00416B1F /* discolights-loop.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "discolights-loop.mov"; sourceTree = "<group>"; };
+		BA0A043621A4B09D00416B1F /* disco-sound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "disco-sound.m4a"; sourceTree = "<group>"; };
+		BA0A043921A4B0C600416B1F /* Level5.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level5.sks; sourceTree = "<group>"; };
+		BA0A043A21A4B0C600416B1F /* Level6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level6.sks; sourceTree = "<group>"; };
+		BA0A043D21A4B32600416B1F /* PictureNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureNode.swift; sourceTree = "<group>"; };
+		BA0A043F21A4BCC600416B1F /* DiscoBallNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoBallNode.swift; sourceTree = "<group>"; };
+		BA0A044121A4C07C00416B1F /* HintNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintNode.swift; sourceTree = "<group>"; };
 		BA245D80218E574D0050DE7E /* BlockNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockNode.swift; sourceTree = "<group>"; };
 		BA245D82218E68290050DE7E /* MessageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageNode.swift; sourceTree = "<group>"; };
 		BA245D86218FC6910050DE7E /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
@@ -101,16 +115,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA0A043421A4B09D00416B1F /* media */ = {
+			isa = PBXGroup;
+			children = (
+				BA0A043521A4B09D00416B1F /* discolights-loop.mov */,
+				BA0A043621A4B09D00416B1F /* disco-sound.m4a */,
+			);
+			path = media;
+			sourceTree = "<group>";
+		};
 		BA245D8E21A2278D0050DE7E /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
 				BA245D88218FCB540050DE7E /* SpringNode.swift */,
 				BA245D8F21A227B40050DE7E /* StoneNode.swift */,
+				BA0A044121A4C07C00416B1F /* HintNode.swift */,
 				BA245D82218E68290050DE7E /* MessageNode.swift */,
+				BA0A043D21A4B32600416B1F /* PictureNode.swift */,
 				BA69CF6421863AD7002DECA1 /* CatNode.swift */,
 				BA245D8A21A1EF570050DE7E /* HookBaseNode.swift */,
 				BA245D80218E574D0050DE7E /* BlockNode.swift */,
 				BA69CF62218634E5002DECA1 /* BedNode.swift */,
+				BA0A043F21A4BCC600416B1F /* DiscoBallNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -157,6 +183,7 @@
 				BA245D8E21A2278D0050DE7E /* Nodes */,
 				BA88CDBB2164132000200191 /* Scenes */,
 				BA88CDB02164062800200191 /* Sounds */,
+				BA0A043421A4B09D00416B1F /* media */,
 				BA88CD8E2163FECE00200191 /* AppDelegate.swift */,
 				BA88CD922163FECE00200191 /* Actions.sks */,
 				BA88CD942163FECE00200191 /* GameScene.swift */,
@@ -191,6 +218,8 @@
 				BA88CDC021642B7A00200191 /* CatWakeUp.sks */,
 				BA245D86218FC6910050DE7E /* Level2.sks */,
 				BA245D8C21A222ED0050DE7E /* Level3.sks */,
+				BA0A043921A4B0C600416B1F /* Level5.sks */,
+				BA0A043A21A4B0C600416B1F /* Level6.sks */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -259,16 +288,20 @@
 				BA88CDB92164062800200191 /* lose.mp3 in Resources */,
 				BA88CD9C2163FECF00200191 /* Assets.xcassets in Resources */,
 				BA0A043321A4958800416B1F /* Level4.sks in Resources */,
+				BA0A043721A4B09D00416B1F /* discolights-loop.mov in Resources */,
+				BA0A043821A4B09D00416B1F /* disco-sound.m4a in Resources */,
 				BA88CDC121642B7A00200191 /* CatWakeUp.sks in Resources */,
 				BA245D87218FC6910050DE7E /* Level2.sks in Resources */,
 				BA88CDB82164062800200191 /* win.mp3 in Resources */,
 				BA88CD9F2163FECF00200191 /* LaunchScreen.storyboard in Resources */,
+				BA0A043B21A4B0C600416B1F /* Level5.sks in Resources */,
 				BA245D8D21A222ED0050DE7E /* Level3.sks in Resources */,
 				BA88CDB62164062800200191 /* mrreow.mp3 in Resources */,
 				BA88CDB72164062800200191 /* pop.mp3 in Resources */,
 				BA88CDBA2164062800200191 /* backgroundMusic.mp3 in Resources */,
 				BA88CD932163FECE00200191 /* Actions.sks in Resources */,
 				BA88CDBD2164137A00200191 /* Cat.sks in Resources */,
+				BA0A043C21A4B0C600416B1F /* Level6.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,15 +315,18 @@
 				BA88CD952163FECE00200191 /* GameScene.swift in Sources */,
 				BA245D83218E68290050DE7E /* MessageNode.swift in Sources */,
 				BA69CF7721864E26002DECA1 /* SKAction+Extensions.swift in Sources */,
+				BA0A043E21A4B32600416B1F /* PictureNode.swift in Sources */,
 				BA69CF7621864E26002DECA1 /* SKTTimingFunctions.swift in Sources */,
 				BA69CF7421864E26002DECA1 /* CGVector+Extensions.swift in Sources */,
 				BA69CF7A21864E26002DECA1 /* CGPoint+Extensions.swift in Sources */,
 				BA69CF7821864E26002DECA1 /* SKAction+SpecialEffects.swift in Sources */,
 				BA245D9021A227B40050DE7E /* StoneNode.swift in Sources */,
+				BA0A044021A4BCC600416B1F /* DiscoBallNode.swift in Sources */,
 				BA69CF7C21864E26002DECA1 /* SKTAudio.swift in Sources */,
 				BA69CF7921864E26002DECA1 /* SKNode+Extensions.swift in Sources */,
 				BA69CF7B21864E26002DECA1 /* SKTEffects.swift in Sources */,
 				BA245D81218E574D0050DE7E /* BlockNode.swift in Sources */,
+				BA0A044221A4C07C00416B1F /* HintNode.swift in Sources */,
 				BA69CF7321864E26002DECA1 /* SKColor+Extensions.swift in Sources */,
 				BA69CF6521863AD7002DECA1 /* CatNode.swift in Sources */,
 				BA69CF63218634E5002DECA1 /* BedNode.swift in Sources */,
